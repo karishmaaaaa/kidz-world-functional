@@ -132,17 +132,18 @@ function updateWhatsappLink() {
 }
 cartButton.onclick = () => {
   updatePrice();
+  updateWhatsappLink()
+  window.open(whatsappLink, "_blank")
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity != 0) {
       console.log(
         "Item name: " +
-          items[index].name +
-          " - Quantity: " +
-          items[index].quantity
+        items[index].name +
+        " - Quantity: " +
+        items[index].quantity
       );
     }
   }
-
   console.log(
     "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
   );
